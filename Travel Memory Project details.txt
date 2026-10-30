@@ -1,0 +1,6 @@
+Gajjala Janardhan Reddy 
+Project Name - Graded Assignment_Travel Memory Application Deployment_Task
+
+
+
+http://travelmemory-frontend-alb-1334734304.us-east-1.elb.amazonaws.com/
