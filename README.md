@@ -77,231 +77,150 @@ network access.
 
 ## 4. Screenshot checklist
 
+Capture and add the relevant genuine screenshots to the `screenshots/` folder. The evidence should cover the following areas:
+
+
 Create a `screenshots/` folder and save the screenshots using the
 suggested names. Include only images actually captured; omit or mark
 unavailable items as pending.
 
 ### A. MongoDB Atlas
 
-  ---------------------------------------------------------------------------------------
-  No.                     Suggested filename                      Screenshot should show
-  ----------------------- --------------------------------------- -----------------------
-  01                      `01-mongodb-atlas-cluster.png`          Atlas project and
                                                                   TravelMemory cluster.
 
-  02                      `02-mongodb-database-collections.png`   Database and
                                                                   `tripdetails`
                                                                   collection, if shown.
 
-  03                      `03-mongodb-network-access.png`         Security → Network
                                                                   Access / IP Access
                                                                   List. Hide sensitive
                                                                   details.
 
-  04                      `04-mongodb-connection-success.png`     Successful database
                                                                   connection in
                                                                   application or
                                                                   terminal.
-  ---------------------------------------------------------------------------------------
 
 ### B. EC2 creation and configuration
 
-  -------------------------------------------------------------------------------------
-  No.                     Suggested filename                    Screenshot should show
-  ----------------------- ------------------------------------- -----------------------
-  05                      `05-ec2-instances-overview.png`       Frontend and backend
                                                                 instances in EC2.
 
-  06                      `06-frontend-ec2-details.png`         Frontend instance
                                                                 details and networking.
 
-  07                      `07-backend-master-ec2-details.png`   `backend-master2`
                                                                 instance details.
 
-  08                      `08-backend-2-ec2-details.png`        `backend-2` instance
                                                                 details.
 
-  09                      `09-ec2-security-groups.png`          Relevant
                                                                 inbound/outbound rules.
 
-  10                      `10-ec2-availability-zones.png`       Instance Availability
                                                                 Zone placement.
-  -------------------------------------------------------------------------------------
 
 ### C. Backend deployment
 
-  -------------------------------------------------------------------------------------------------------------
-  No.                     Suggested filename                          Screenshot should show
-  ----------------------- ------------------------------------------- -----------------------------------------
-  11                      `11-backend-project-files.png`              Backend files and `index.js`.
 
-  12                      `12-backend-dependencies.png`               Package configuration / dependency
                                                                       installation.
 
-  13                      `13-backend-systemd-service.png`            `travelmemory-backend.service`
                                                                       configuration; redact secrets.
 
-  14                      `14-backend-service-running.png`            `systemctl status travelmemory-backend`
                                                                       showing active service.
 
-  15                      `15-backend-trip-api-200.png`               `curl -i http://localhost:3001/trip`
                                                                       returning HTTP 200 and trip data.
 
-  16                      `16-backend-mongodb-connection-error.png`   MongoDB connection failure encountered.
 
-  17                      `17-backend-mongodb-connection-fixed.png`   Successful database connection after
                                                                       correction.
-  -------------------------------------------------------------------------------------------------------------
 
 ### D. Frontend build and Nginx
 
-  -----------------------------------------------------------------------------------
-  No.                     Suggested filename                  Screenshot should show
-  ----------------------- ----------------------------------- -----------------------
-  18                      `18-frontend-project-files.png`     React project
                                                               structure.
 
-  19                      `19-frontend-build-success.png`     Successful production
                                                               build.
 
-  20                      `20-nginx-configuration.png`        Nginx site and API
                                                               routing configuration;
                                                               hide secrets.
 
-  21                      `21-nginx-service-status.png`       Nginx service active.
 
-  22                      `22-nginx-api-trip-200.png`         `/api/trip` through
                                                               Nginx returning HTTP
                                                               200.
 
-  23                      `23-frontend-browser-working.png`   TravelMemory frontend
                                                               in browser.
-  -----------------------------------------------------------------------------------
 
 ### E. AMI and additional backend instance
 
-  ------------------------------------------------------------------------------------
-  No.                     Suggested filename                   Screenshot should show
-  ----------------------- ------------------------------------ -----------------------
-  24                      `24-backend-ami-created.png`         AMI created from
                                                                configured backend.
 
-  25                      `25-ami-available.png`               AMI available status.
 
-  26                      `26-second-backend-instance.png`     Additional backend
                                                                instance
                                                                created/configured.
 
-  27                      `27-backend-instances-running.png`   Both backend instances
                                                                running.
-  ------------------------------------------------------------------------------------
 
 ### F. Target groups and load balancers
 
-  ----------------------------------------------------------------------------------------------
-  No.                     Suggested filename                             Screenshot should show
-  ----------------------- ---------------------------------------------- -----------------------
-  28                      `28-backend-target-group-configuration.png`    Backend target group
                                                                          health check and port
                                                                          3001.
 
-  29                      `29-backend-targets-healthy.png`               Both backend targets
                                                                          healthy.
 
-  30                      `30-backend-alb-listener.png`                  Backend ALB listener
                                                                          and forwarding rule.
 
-  31                      `31-backend-alb-details.png`                   Backend ALB details and
                                                                          DNS.
 
-  32                      `32-frontend-target-group-configuration.png`   Frontend target group
                                                                          configuration.
 
-  33                      `33-frontend-target-healthy.png`               Frontend target
                                                                          healthy.
 
-  34                      `34-frontend-alb-listener.png`                 Frontend ALB HTTP
                                                                          listener and forwarding
                                                                          rule.
 
-  35                      `35-frontend-alb-details.png`                  Frontend ALB details
                                                                          and DNS.
 
-  36                      `36-travelmemory-alb-browser-test.png`         Application accessed
                                                                          through frontend ALB
                                                                          DNS.
-  ----------------------------------------------------------------------------------------------
 
 ### G. Domain, DNS and HTTPS
 
-  ---------------------------------------------------------------------------------------
-  No.                     Suggested filename                    Screenshot should show
-  ----------------------- ------------------------------------- -------------------------
-  37                      `37-domain-registration.png`          Domain management page
                                                                 for
                                                                 `shreeyaanshitech.net`;
                                                                 hide account details.
 
-  38                      `38-godaddy-dns-records.png`          Relevant GoDaddy DNS
                                                                 records.
 
-  39                      `39-acm-certificate-request.png`      ACM request for root
                                                                 domain and `www` name.
 
-  40                      `40-acm-validation-cnames.png`        Exact ACM validation
                                                                 CNAME names and values.
 
-  41                      `41-acm-certificate-status.png`       ACM pending-validation or
                                                                 issued status.
 
-  42                      `42-domain-dns-validation-test.png`   DNS lookup used to verify
                                                                 CNAME records.
 
-  43                      `43-https-alb-listener.png`           HTTPS listener on port
                                                                 443 with issued
                                                                 certificate, once
                                                                 configured.
 
-  44                      `44-custom-domain-browser-test.png`   Custom domain loading
                                                                 over HTTPS, once working.
-  ---------------------------------------------------------------------------------------
 
 ### H. Troubleshooting and recovery
 
-  -----------------------------------------------------------------------------------------
-  No.                     Suggested filename                        Screenshot should show
-  ----------------------- ----------------------------------------- -----------------------
-  45                      `45-ec2-stopped-instances.png`            EC2 console showing
                                                                     stopped instances.
 
-  46                      `46-cloudtrail-stopinstances-event.png`   CloudTrail
                                                                     `StopInstances` event;
                                                                     redact account/session
                                                                     details.
 
-  47                      `47-backend-targets-unhealthy.png`        Backend target group
                                                                     showing unhealthy
                                                                     targets.
 
-  48                      `48-backend-systemd-mongodb-error.png`    Backend logs showing
                                                                     Atlas connection
                                                                     failure.
 
-  49                      `49-backend-api-retest.png`               API test after
                                                                     database/network
                                                                     correction.
 
-  50                      `50-target-group-health-after-fix.png`    Target group status
                                                                     after recovery.
 
-  51                      `51-frontend-503-or-502-error.png`        Browser 503/502 error
                                                                     during troubleshooting,
                                                                     if retained.
 
-  52                      `52-final-application-validation.png`     Final successful
                                                                     frontend and API
                                                                     checks.
-  -----------------------------------------------------------------------------------------
 
 ## 5. Useful deployment commands
 
@@ -432,12 +351,11 @@ not necessarily simultaneous.
 
 ## 8. Suggested repository structure
 
-``` text
+```text
 TravelMemory/
 ├── README.md
 └── screenshots/
-    ├── TravelMemory_AWS_Deployment_Actual_Screenshots.docx
-    
+    └── (add your genuine deployment screenshots here)
 ```
 
 Only add screenshots you actually captured. If an image is unavailable,
